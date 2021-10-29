@@ -111,7 +111,7 @@ class ClassRegistry {
 		$count = count($objects);
 		$availableDs = null;
 
-		var_dump($objects); exit;
+
 		foreach ($objects as $settings) {
 
 			if (is_numeric($settings)) {
@@ -141,6 +141,10 @@ class ClassRegistry {
 					return $model;
 				}
 
+				var_dump($plugin);
+				var_dump($pluginPath);
+				var_dump($class);
+				exit;
 				App::uses($plugin . 'AppModel', $pluginPath . 'Model');
 				App::uses($class, $pluginPath . 'Model');
 
