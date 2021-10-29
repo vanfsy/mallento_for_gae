@@ -45,8 +45,8 @@ class FrontAppController extends AppController {
         $this->set('root_url',FULL_BASE_URL.'/');
 
         // マスターデータ取得
-        $this->arrMasterData = $this->Utility->getMasterData();
-        $this->set('arrMasterData',$this->arrMasterData);
+        //$this->arrMasterData = $this->Utility->getMasterData();
+        //$this->set('arrMasterData',$this->arrMasterData);
 
         //Copyright
         $this->crYear = date('Y');
