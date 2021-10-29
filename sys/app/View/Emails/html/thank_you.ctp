@@ -5,7 +5,7 @@
 <?php echo $tmpLink; ?><br><br>
 ご本人様確認完了後、下記よりログインできます。<br><br>
 ▼「<?php echo Configure::read('info.siteName'); ?>」ログインページ<br>
-http://<?php echo Configure::read('info.domain'); ?>/mypage/login<br><br>
+httsp://<?php echo Configure::read('info.domain'); ?>/mypage/login<br><br>
 ・メールアドレス： <?php echo $mailAddress; ?><br>
 ・パスワード： <?php echo $password; ?><br><br>
 ▼ お問い合わせ先<br>
