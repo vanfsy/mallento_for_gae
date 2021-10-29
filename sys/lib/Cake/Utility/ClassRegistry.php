@@ -145,7 +145,10 @@ class ClassRegistry {
 				App::uses($plugin . 'AppModel', $pluginPath . 'Model');
 				App::uses($class, $pluginPath . 'Model');
 
-
+				var_dump($class);
+                var_dump(class_exists($class));
+                var_dump(interface_exists($class));
+                exit;
 				if (class_exists($class) || interface_exists($class)) {
 					$reflection = new ReflectionClass($class);
 					if ($reflection->isAbstract() || $reflection->isInterface()) {
@@ -178,8 +181,7 @@ class ClassRegistry {
 					}
 				}
 
-				var_dump(isset($instance)); exit;
-				
+
 				if (!isset($instance)) {
 					$appModel = 'AppModel';
 					if ($strict) {
