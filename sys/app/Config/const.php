@@ -281,39 +281,39 @@ Configure::write('mail', array(
 
 
 Configure::write('info', array(
-    'siteName' => 'サイト名',
-    'domain' => 'sample.com',
-    'adminMail' => 'info@sample.com',
-    'sendDomain' => 'noreply@sample.com'
+    'siteName' => 'bond',
+    'domain' => 'mallento2.an.r.appspot.com',
+    'adminMail' => 'administrator@bondpf.com',
+    'sendDomain' => 'administrator@bondpf.com'
 ));
 
 Configure::write('page', array(
-    'main' => 'サイト名',
+    'main' => 'bond',
     'order' => '注文方法',
     'send' => '入稿方法',
     'payment' => '支払方法',
-    'adminMail' => 'info@sample.com',
-    'sendDomain' => 'noreply@sample.com'
+    'adminMail' => 'administrator@bondpf.com',
+    'sendDomain' => 'administrator@bondpf.com'
 ));
 
 Configure::write('html', array(
-    'privacy' => 'サイト名｜個人情報保護について',
-    'law' => 'サイト名｜特定商法取引に基づく表記',
-    'guide' => 'サイト名｜購入者ガイド',
-    'guide_sale' => 'サイト名｜出品者ガイド',
-    'contact' => 'サイト名｜お問い合わせ',
-    'cart' => 'サイト名｜カート',
-    'category' => 'サイト名｜カテゴリ一覧',
-    'detail' => 'サイト名｜商品詳細',
-    'items' => 'サイト名｜商品一覧',
-    'mypage' => 'サイト名｜マイページ',
-    'tag' => 'サイト名｜タグ一覧',
-    'member' => 'サイト名｜新規会員登録',
-    'kinds' => 'サイト名｜ジャンル一覧',
-    'register' => 'サイト名｜登録情報管理',
-    'itemRegister' => 'サイト名｜商品登録ページ',
-    'myPurchase' => 'サイト名｜マイページ購入者用管理',
-    'login' => 'サイト名｜ログイン',
+    'privacy' => 'bond｜個人情報保護について',
+    'law' => 'bond｜特定商法取引に基づく表記',
+    'guide' => 'bond｜購入者ガイド',
+    'guide_sale' => 'bond｜出品者ガイド',
+    'contact' => 'bond｜お問い合わせ',
+    'cart' => 'bond｜カート',
+    'category' => 'bond｜カテゴリ一覧',
+    'detail' => 'bond｜商品詳細',
+    'items' => 'bond｜商品一覧',
+    'mypage' => 'bond｜マイページ',
+    'tag' => 'bond｜タグ一覧',
+    'member' => 'bond｜新規会員登録',
+    'kinds' => 'bond｜ジャンル一覧',
+    'register' => 'bond｜登録情報管理',
+    'itemRegister' => 'bond｜商品登録ページ',
+    'myPurchase' => 'bond｜マイページ購入者用管理',
+    'login' => 'bond｜ログイン',
 ));
 
 Configure::write('rating', array(
