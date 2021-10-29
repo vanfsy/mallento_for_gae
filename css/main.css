@@ -393,7 +393,7 @@ ul.header_menu li{
     border-radius: 5px;
 }
 #menu li {
-    width: 134px;
+    width: 187px;
     height:51px;
     float: left;
     display:block;
@@ -403,6 +403,7 @@ ul.header_menu li{
     border-left: #CCCCCC 1px solid;
 }
 #menu li:first-child{
+    width: 190px;
     border-left:none;
 }
 #menu li:first-child a{
