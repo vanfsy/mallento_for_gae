@@ -112,6 +112,7 @@ class ClassRegistry {
 		$availableDs = null;
 
 		foreach ($objects as $settings) {
+		    var_dump($settings); exit;
 			if (is_numeric($settings)) {
 				trigger_error(__d('cake_dev', '(ClassRegistry::init() Attempted to create instance of a class with a numeric name'), E_USER_WARNING);
 				return false;
