@@ -60,39 +60,23 @@
  * For Sql Server : http://msdn.microsoft.com/en-us/library/ms190356.aspx
  */
 class DATABASE_CONFIG {
-
-    public $default = array(
+	public $default = NULL;
+	
+    public $prod = array(
         'datasource' => 'Database/Mysql',
         'persistent' => false,
-        'host' => 'mysql7015.xserver.jp',
-        'login' => 'mallento_fill',
-        'password' => 's2Ew7seW',
-        'database' => 'mallento_tabito',
+        'unix_socket' => '/cloudsql/mallento2:asia-northeast1:dbmallento',
+        'login' => 'root',
+        'password' => 'solomon2021',
+        'database' => 'db_mallento',
         'prefix' => '',
         'encoding' => 'utf8',
     );
-
-    public $dev = array(
-        'datasource' => 'Database/Mysql',
-        'persistent' => false,
-        'host' => 'mysql7015.xserver.jp',
-        'login' => 'mallento_fill',
-        'password' => 's2Ew7seW',
-        'database' => 'mallento_tabito',
-        'prefix' => '',
-        'encoding' => 'utf8',
-    );
-
-    public $test = array(
-        'datasource' => 'Database/Mysql',
-        'persistent' => false,
-        'host' => 'mysql7015.xserver.jp',
-        'login' => 'mallento_fill',
-        'password' => 's2Ew7seW',
-        'database' => 'mallento_tabito',
-        'prefix' => '',
-        //'encoding' => 'utf8',
-    );
+    
+    
+    function __construct() {
+    	$this->default = $this->prod;
+    }
 
 }
 ?>

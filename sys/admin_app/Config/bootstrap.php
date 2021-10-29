@@ -23,7 +23,7 @@
  */
 
 // Setup a 'default' cache configuration for use in the application.
-Cache::config('default', array('engine' => 'File'));
+Cache::config('default', array('engine' => 'Apc'));
 
 /**
  * The settings below can be used to set additional paths to models, views and controllers.
@@ -50,17 +50,6 @@ Cache::config('default', array('engine' => 'File'));
  * ));
  *
  */
-/*
-App::build(
-  array(
-    'Model' => array('/var/www/sys/app/Model'),
-  )
-);
-*/
-// Modelディレクトリを定義
-App::build(array('Model' => array(dirname(dirname(CAKE)).DS.'app'.DS.'Model'.DS)),App::RESET);
-// Model/Behaviorディレクトリを定義
-App::build(array('Model/Behavior' => array(dirname(dirname(CAKE)).DS.'app'.DS.'Model'.DS.'Behavior'.DS)),App::RESET);
 
 /**
  * Custom Inflector rules can be set to correctly pluralize or singularize table, model, controller names or whatever other
@@ -102,23 +91,30 @@ Configure::write('Dispatcher.filters', array(
     'CacheDispatcher'
 ));
 
+config('const');
+
 /**
  * Configures default file logging options
  */
+ 
+$engine = 'SyslogLog';
 App::uses('CakeLog', 'Log');
 CakeLog::config('debug', array(
-    'engine' => 'File',
+    'engine' => $engine,
     'types' => array('notice', 'info', 'debug'),
     'file' => 'debug',
 ));
 CakeLog::config('error', array(
-    'engine' => 'File',
+    'engine' => $engine,
     'types' => array('warning', 'error', 'critical', 'alert', 'emergency'),
     'file' => 'error',
 ));
-config('../../app/Config/const');
+App::uses( 'CakeEmail', 'Network/Email');
 CakePlugin::load('UploadPack');
-Configure::write('App.imageBaseUrl', null);
+CakePlugin::load('DebugKit');
 
-define('UPLOAD_PACK_PATH', '../upload/:model/:id/:basename_:style.:extension');
+define('UPLOAD_PACK_PATH', ':webroot/upload/:model/:id/:basename_:style.:extension');
 
+define("VIEW_PAGE_APP",APP."View".DS);
+define("VIEW_MOBILE_APP",APP."View".DS."mobile".DS);
+define("HOME_URL",FULL_BASE_URL.'/');
