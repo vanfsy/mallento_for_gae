@@ -111,8 +111,9 @@ class ClassRegistry {
 		$count = count($objects);
 		$availableDs = null;
 
+		var_dump($objects); exit;
 		foreach ($objects as $settings) {
-		    var_dump($settings); exit;
+
 			if (is_numeric($settings)) {
 				trigger_error(__d('cake_dev', '(ClassRegistry::init() Attempted to create instance of a class with a numeric name'), E_USER_WARNING);
 				return false;
@@ -142,6 +143,7 @@ class ClassRegistry {
 
 				App::uses($plugin . 'AppModel', $pluginPath . 'Model');
 				App::uses($class, $pluginPath . 'Model');
+
 
 				if (class_exists($class) || interface_exists($class)) {
 					$reflection = new ReflectionClass($class);
