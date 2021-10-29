@@ -15,14 +15,15 @@ handlers:
 - url: /remodal
   static_dir: remodal
 
-- url: /admin
-  static_dir: admin
-
 #- url: /admin.*
-#  script: admin/index.php
+#  static_dir: admin
+
+- url: /admin.*
+  script: admin/index.php
 #
-#- url: /admin/.*
-#  script: admin/index.php
+- url: /admin/.*
+  script: admin/index.php
+#
 #- url: /admin
 #  script: admin/index.php
 
