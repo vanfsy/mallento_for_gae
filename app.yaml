@@ -12,5 +12,11 @@ handlers:
 - url: /img
   static_dir: img
 
+- url: /remodal
+  static_dir: remodal
+
 - url: /.*
   script: index.php
+
+- url: /admin/.*
+  script: admin/index.php

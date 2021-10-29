@@ -1,4 +1,11 @@
 <?php
+    session_start();
+
+    //Change the default TMP Folder path to a Cloud Storage Bucket
+    if(isset($_SERVER['SERVER_SOFTWARE']) && strpos($_SERVER['SERVER_SOFTWARE'],'Google App Engine') !== false) {
+        define('TMP', "gs://mallento2.appspot.com/");
+    }
+
 /**
  * Index
  *
@@ -38,7 +45,7 @@ if (!defined('DS')) {
  */
 if (!defined('ROOT')) {
 //    define('ROOT', dirname(dirname(dirname(__FILE__))).'/sys');
-    define('ROOT', dirname(dirname(dirname(__FILE__))) . DS . 'sys');
+    define('ROOT', dirname(dirname(__FILE__)) . DS . 'sys');
 }
 
 /**
