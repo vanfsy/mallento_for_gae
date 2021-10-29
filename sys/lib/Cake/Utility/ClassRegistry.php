@@ -182,6 +182,9 @@ class ClassRegistry {
 					}
 					if (!empty($appModel)) {
 						$settings['name'] = $class;
+						var_dump($appModel);
+						var_dump($settings);
+						exit;
 						$instance = new $appModel($settings);
 					}
 
