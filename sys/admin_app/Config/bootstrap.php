@@ -57,9 +57,9 @@ App::build(
   )
 );
 */
-// Modelディレクトリを定義
+// Model繝�繧｣繝ｬ繧ｯ繝医Μ繧貞ｮ夂ｾｩ
 App::build(array('Model' => array(dirname(dirname(CAKE)).DS.'app'.DS.'Model'.DS)),App::RESET);
-// Model/Behaviorディレクトリを定義
+// Model/Behavior繝�繧｣繝ｬ繧ｯ繝医Μ繧貞ｮ夂ｾｩ
 App::build(array('Model/Behavior' => array(dirname(dirname(CAKE)).DS.'app'.DS.'Model'.DS.'Behavior'.DS)),App::RESET);
 
 /**
@@ -105,7 +105,6 @@ Configure::write('Dispatcher.filters', array(
 /**
  * Configures default file logging options
  */
- 
 $engine = 'SyslogLog';
 App::uses('CakeLog', 'Log');
 CakeLog::config('debug', array(
@@ -120,7 +119,7 @@ CakeLog::config('error', array(
 ));
 config('../../app/Config/const');
 CakePlugin::load('UploadPack');
-//CakePlugin::load('DebugKit');
+Configure::write('App.imageBaseUrl', null);
 
 define('UPLOAD_PACK_PATH', '../upload/:model/:id/:basename_:style.:extension');
 
