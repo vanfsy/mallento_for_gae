@@ -15,6 +15,9 @@ handlers:
 - url: /remodal
   static_dir: remodal
 
+- url: /admin.*
+  script: admin/index.php
+
 - url: /admin/.*
   script: admin/index.php
 #- url: /admin
