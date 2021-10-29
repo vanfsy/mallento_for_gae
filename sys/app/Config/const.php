@@ -302,7 +302,7 @@ Configure::write('mail', array(
 
 Configure::write('info', array(
     'siteName' => 'bond',
-    'domain' => 'mallento2.an.r.appspot.com',
+    'domain' => 'bondpf.com',
     'adminMail' => 'administrator@bondpf.com',
     'sendDomain' => 'administrator@bondpf.com'
 ));
