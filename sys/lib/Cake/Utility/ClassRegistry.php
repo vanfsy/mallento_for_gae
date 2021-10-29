@@ -141,10 +141,7 @@ class ClassRegistry {
 					return $model;
 				}
 
-				var_dump($plugin);
-				var_dump($pluginPath);
-				var_dump($class);
-				exit;
+
 				App::uses($plugin . 'AppModel', $pluginPath . 'Model');
 				App::uses($class, $pluginPath . 'Model');
 
@@ -180,6 +177,9 @@ class ClassRegistry {
 						$instance = null;
 					}
 				}
+
+				var_dump(isset($instance)); exit;
+				
 				if (!isset($instance)) {
 					$appModel = 'AppModel';
 					if ($strict) {
