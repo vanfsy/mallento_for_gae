@@ -111,7 +111,7 @@ CakeLog::config('error', array(
 ));
 App::uses( 'CakeEmail', 'Network/Email');
 CakePlugin::load('UploadPack');
-CakePlugin::load('DebugKit');
+//CakePlugin::load('DebugKit');
 
 define('UPLOAD_PACK_PATH', ':webroot/upload/:model/:id/:basename_:style.:extension');
 
