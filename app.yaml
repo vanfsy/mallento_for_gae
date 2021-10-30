@@ -18,11 +18,28 @@ handlers:
 #- url: /admin.*
 #  static_dir: admin
 
+- url: /admin/css
+  static_dir: admin/css
+
+- url: /admin/datepicker
+  static_dir: admin/datepicker
+
+- url: /admin/js
+  static_dir: admin/js
+
+- url: /admin/img
+  static_dir: admin/img
+
+- url: /admin/images
+  static_dir: admin/images
+
+
 - url: /admin.*
   script: admin/index.php
 #
 - url: /admin/.*
   script: admin/index.php
+
 #
 #- url: /admin
 #  script: admin/index.php
