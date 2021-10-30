@@ -35,10 +35,12 @@ class UserController extends AppController {
 
     public function beforeFilter() {
         parent::beforeFilter();
+        $this->loadModel('Member');
         $this->Auth->allow('add','entry','logout','login','entry_verification','entry_complete','entry_verification_complete');
     }
 
     public function login() {
+        $this->loadModel('Member');
         if ($this->request->is('post') || $this->request->is('put')) {
             if ($this->Auth->login()) {
                 $this->redirect('/dashboard/');
