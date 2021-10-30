@@ -39,6 +39,13 @@ class FrontAppController extends AppController {
 
     var $ext = '.html';
 
+    public function beforeRender() {
+        parent::beforeRender();
+        $this->loadModel('HtmlPart');
+        $this->set('html_header_logo', $this->HtmlPart->getHtml(HtmlPart::HEADER_LOGO));
+        $this->set('html_left_top', $this->HtmlPart->getHtml(HtmlPart::LEFT_TOP));
+    }
+
     //ver2.4
     public function beforeFilter() {
 
