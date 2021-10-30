@@ -54,7 +54,7 @@ class AppController extends Controller {
     public function beforeRender() {
         parent::beforeRender();
         $this->loadModel('HtmlPart');
-        $this->set('HTML_HEADER_LOGO', $this->HtmlPart->getHtml(HtmlPart::HEADER_LOGO));
-        $this->set('HTML_LEFT_TOP', $this->HtmlPart->getHtml(HtmlPart::LEFT_TOP));
+        $this->set('html_header_logo', $this->HtmlPart->getHtml(HtmlPart::HEADER_LOGO));
+        $this->set('html_left_top', $this->HtmlPart->getHtml(HtmlPart::LEFT_TOP));
     }
 }
