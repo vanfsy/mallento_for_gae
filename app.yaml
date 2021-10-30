@@ -33,6 +33,8 @@ handlers:
 - url: /admin/images
   static_dir: admin/images
 
+- url: /admin
+  script: admin/index.php
 
 - url: /admin.*
   script: admin/index.php
@@ -41,8 +43,7 @@ handlers:
   script: admin/index.php
 
 #
-#- url: /admin
-#  script: admin/index.php
+
 
 - url: /.*
   script: index.php
