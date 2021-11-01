@@ -1,5 +1,8 @@
 <?php
-class PointPayController extends AppController {
+
+App::uses('AdminappController', 'Controller');
+
+class PointPayController extends AdminappController {
 
     public $uses = array('OrderPoint');
 

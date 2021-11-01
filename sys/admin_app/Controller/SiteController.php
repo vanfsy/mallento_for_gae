@@ -1,7 +1,7 @@
 <?php
-App::uses('AppController', 'Controller');
+App::uses('AdminappController', 'Controller');
 
-class SiteController extends AppController {
+class SiteController extends AdminappController {
 
     public function top(){
         $this->layout = "ajax";

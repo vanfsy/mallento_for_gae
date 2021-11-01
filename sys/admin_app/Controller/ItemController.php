@@ -18,6 +18,8 @@
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
 
+App::uses('AdminappController', 'Controller');
+
 /**
  * Static content controller
  *
@@ -26,7 +28,7 @@
  * @package       app.Controller
  * @link http://book.cakephp.org/2.0/en/controllers/pages-controller.html
  */
-class ItemController extends AppController {
+class ItemController extends AdminappController {
 
     public $uses = array('Item','DataLeave','Member');
 

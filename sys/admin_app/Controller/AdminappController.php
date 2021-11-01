@@ -30,7 +30,7 @@ App::uses('Controller', 'Controller');
  * @package        app.Controller
  * @link        http://book.cakephp.org/2.0/en/controllers.html#the-app-controller
  */
-class AppController extends Controller {
+class AdminappController extends Controller {
     public $helpers = array('Form', 'Html', 'Time','UploadPack.Upload','Cache','Paging');
     public $uses = array('Member');
 

@@ -1,5 +1,8 @@
 <?php
-class OrderController extends AppController {
+
+App::uses('AdminappController', 'Controller');
+
+class OrderController extends AdminappController {
 
     public $uses = array('OrderItem');
 

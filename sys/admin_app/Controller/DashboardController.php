@@ -18,7 +18,7 @@
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
 
-App::uses('AppController', 'Controller');
+App::uses('AdminappController', 'Controller');
 
 /**
  * Static content controller
@@ -28,7 +28,7 @@ App::uses('AppController', 'Controller');
  * @package       app.Controller
  * @link http://book.cakephp.org/2.0/en/controllers/pages-controller.html
  */
-class DashboardController extends AppController {
+class DashboardController extends AdminappController {
 
     public $uses = array('Whatsnews','Inquiry','Item');
 

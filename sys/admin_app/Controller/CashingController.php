@@ -1,5 +1,8 @@
 <?php
-class CashingController extends AppController {
+
+App::uses('AdminappController', 'Controller');
+
+class CashingController extends AdminappController {
 
     public $uses = array('CashingData', 'Config');
 
