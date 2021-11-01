@@ -38,6 +38,7 @@ class PagesController extends AppController {
     public $uses = array();
 
     public function index() {
+        var_dump('test index'); exit;
         $this->redirect('/admin/dashboard/');
     }
 
