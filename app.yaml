@@ -17,12 +17,15 @@ handlers:
 
   - url: /admin/images
     static_dir: admin/images
+    secure: always
 
   - url: /admin
     script: admin/index.php
+    secure: always
 
   - url: /admin/.*
     script: admin/index.php
+    secure: always
 
   - url: /css
     static_dir: css
@@ -42,6 +45,7 @@ handlers:
 
   - url: /.*
     script: index.php
+    secure: always
 
 
 #- url: /admin/css
