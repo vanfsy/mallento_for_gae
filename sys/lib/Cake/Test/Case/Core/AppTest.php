@@ -521,7 +521,7 @@ class AppTest extends CakeTestCase {
 
 			$file = App::import('Controller', 'Pages');
 			$this->assertTrue($file);
-			$this->assertTrue(class_exists('PagesController'));
+			$this->assertTrue(class_exists('ApagesController'));
 
 			$classes = array_flip(get_declared_classes());
 

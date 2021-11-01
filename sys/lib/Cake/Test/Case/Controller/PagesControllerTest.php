@@ -36,7 +36,7 @@ class PagesControllerTest extends CakeTestCase {
 				CAKE . 'Test' . DS . 'test_app' . DS . 'View' . DS
 			)
 		));
-		$Pages = new PagesController(new CakeRequest(null, false), new CakeResponse());
+		$Pages = new ApagesController(new CakeRequest(null, false), new CakeResponse());
 
 		$Pages->viewPath = 'Posts';
 		$Pages->display('index');
@@ -59,7 +59,7 @@ class PagesControllerTest extends CakeTestCase {
  */
 	public function testMissingView() {
 		Configure::write('debug', 0);
-		$Pages = new PagesController(new CakeRequest(null, false), new CakeResponse());
+		$Pages = new ApagesController(new CakeRequest(null, false), new CakeResponse());
 		$Pages->display('non_existing_page');
 	}
 
@@ -72,7 +72,7 @@ class PagesControllerTest extends CakeTestCase {
  */
 	public function testMissingViewInDebug() {
 		Configure::write('debug', 1);
-		$Pages = new PagesController(new CakeRequest(null, false), new CakeResponse());
+		$Pages = new ApagesController(new CakeRequest(null, false), new CakeResponse());
 		$Pages->display('non_existing_page');
 	}
 }

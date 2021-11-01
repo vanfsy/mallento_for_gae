@@ -26,7 +26,7 @@
     Router::connect('/admin/user/:action/*', array('controller' => 'user'));
     Router::connect('/admin/user', array('controller' => 'user', 'action' => 'index'));
 
-    Router::connect('/', array('controller' => 'pages', 'action' => 'index'));
+    Router::connect('/', array('controller' => 'apages', 'action' => 'index'));
     Router::connect('/admin', array('controller' => 'admin', 'action' => 'index'));
     Router::connect('/admin/:action/*', array('controller' => 'admin'));
 
