@@ -61,6 +61,7 @@ class AppController extends Controller {
             // ログアウト後のリダイレクト先を指定
             'logoutRedirect' => array('controller' => 'user', 'action' => 'login'),
         ),
+        'Sendmail'
     );
 
     var $ext = '.html';

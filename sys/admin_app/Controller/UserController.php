@@ -31,7 +31,7 @@ App::uses('AppController', 'Controller');
 class UserController extends AppController {
 
     public $uses = array('Whatsnews','Inquiry','Member', 'Item', 'Review');
-    public $components = array('Session','Sendmail');
+//    public $components = array('Session','Sendmail');
 
     public function beforeFilter() {
         parent::beforeFilter();
