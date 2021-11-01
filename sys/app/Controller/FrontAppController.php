@@ -1,7 +1,6 @@
 <?php
 
 App::uses('CakeEmail', 'Network/Email');
-
 class FrontAppController extends AppController {
 
     public $helpers = array('Form', 'Html', 'Time','Calendar','Image','UploadPack.Upload','FormElements','Cache','Paging');
