@@ -3,11 +3,15 @@ api_version: 1
 threadsafe: yes
 
 handlers:
-  - url: /.*
-    script: index.php
+  - url: /admin
+    script: admin/index.php
 
   - url: /admin/.*
     script: admin/index.php
+
+  - url: /.*
+    script: index.php
+
 
 #- url: /admin/css
 #  static_dir: admin/css
