@@ -111,6 +111,7 @@ if (!empty($failed)) {
 
 App::uses('Dispatcher', 'Routing');
 
+var_dump('app index');
 $Dispatcher = new Dispatcher();
 $Dispatcher->dispatch(
     new CakeRequest(),
