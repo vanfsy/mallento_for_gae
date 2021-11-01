@@ -15,8 +15,15 @@ handlers:
 - url: /remodal
   static_dir: remodal
 
-#- url: /admin.*
-#  static_dir: admin
+- url: /favicon\.ico
+  static_files: webroot/favicon.ico
+  upload: webroot/favicon.ico
+
+- url: .*
+  script: index.php
+
+- url: /.*
+  script: index.php
 
 - url: /admin/css
   static_dir: admin/css
@@ -41,9 +48,3 @@ handlers:
 #
 - url: /admin/.*
   script: admin/index.php
-
-#
-
-
-- url: /.*
-  script: index.php
