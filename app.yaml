@@ -4,10 +4,10 @@ threadsafe: yes
 
 handlers:
   - url: /.*
-    script: index.php?url=$1
+    script: index.php
 
   - url: admin/.*
-    script: admin/index.php?url=$1
+    script: admin/index.php
 
 #- url: /admin/css
 #  static_dir: admin/css
