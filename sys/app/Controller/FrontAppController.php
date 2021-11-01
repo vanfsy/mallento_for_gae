@@ -1,8 +1,7 @@
 <?php
-
-App::uses('AppController', 'app/Controller');
+App::uses('Controller', 'Controller');
 App::uses('CakeEmail', 'Network/Email');
-class FrontAppController extends AppController {
+class FrontAppController extends Controller {
 
     public $helpers = array('Form', 'Html', 'Time','Calendar','Image','UploadPack.Upload','FormElements','Cache','Paging');
     public $uses = array('Item');
@@ -18,7 +17,7 @@ class FrontAppController extends AppController {
             'authenticate' => array(
                 'Form' => array(
                     // 認証時に使用するモデル
-                    'userModel' => 'Member',
+                    'userModel' => 'Memb',
                     // 認証時に使用するモデルのユーザ名とパスワードの対象カラム
                     'fields' => array('username' => 'user_id' , 'password'=>'password'),
                     'scope' => array( 'Member.role' => array('user','admin'),'Member.status > ' => 0,'Member.status < ' => 4),
