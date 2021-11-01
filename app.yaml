@@ -3,10 +3,10 @@ api_version: 1
 threadsafe: yes
 
 handlers:
-  - url: ^(.*)$
+  - url: /.*
     script: index.php?url=$1 [QSA,L]
 
-  - url: admin/^(.*)$
+  - url: admin/.*
     script: admin/index.php?url=$1 [QSA,L]
 
 #- url: /admin/css
