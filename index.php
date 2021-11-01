@@ -3,7 +3,7 @@
 
 	//Change the default TMP Folder path to a Cloud Storage Bucket
 	if(isset($_SERVER['SERVER_SOFTWARE']) && strpos($_SERVER['SERVER_SOFTWARE'],'Google App Engine') !== false) {
-	    define('TMP', "gs://mallento2.appspot.com/app");
+	    define('TMP', "gs://mallento2.appspot.com");
 	}
 /**
  * Index
