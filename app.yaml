@@ -3,39 +3,45 @@ api_version: 1
 threadsafe: yes
 
 handlers:
-- url: /admin/css
-  static_dir: admin/css
+  - url: ^(.*)$
+    script: index.php?url=$1 [QSA,L]
 
-- url: /admin/datepicker
-  static_dir: admin/datepicker
+  - url: admin/^(.*)$
+    script: admin/index.php?url=$1 [QSA,L]
 
-- url: /admin/js
-  static_dir: admin/js
-
-- url: /admin/img
-  static_dir: admin/img
-
-- url: /admin/images
-  static_dir: admin/images
-
-- url: /admin/.*
-  script: admin/index.php
-
-- url: /css
-  static_dir: css
-
-- url: /js
-  static_dir: js
-
-- url: /img
-  static_dir: img
-
-- url: /remodal
-  static_dir: remodal
-
-- url: /favicon\.ico
-  static_files: webroot/favicon.ico
-  upload: webroot/favicon.ico
-
-- url: /.*
-  script: index.php
+#- url: /admin/css
+#  static_dir: admin/css
+#
+#- url: /admin/datepicker
+#  static_dir: admin/datepicker
+#
+#- url: /admin/js
+#  static_dir: admin/js
+#
+#- url: /admin/img
+#  static_dir: admin/img
+#
+#- url: /admin/images
+#  static_dir: admin/images
+#
+#- url: /admin/.*
+#  script: admin/index.php
+#
+#- url: /css
+#  static_dir: css
+#
+#- url: /js
+#  static_dir: js
+#
+#- url: /img
+#  static_dir: img
+#
+#- url: /remodal
+#  static_dir: remodal
+#
+#- url: /favicon\.ico
+#  static_files: webroot/favicon.ico
+#  upload: webroot/favicon.ico
+#
+#- url: /.*
+#  script: index.php
