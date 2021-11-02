@@ -618,7 +618,6 @@ class MypageController extends FrontAppController {
                 $data = $this->request->data;
                 $data['Item'][$data['Item']['input_name']] = $data['Item']['file'];
                 $this->Item->validate = $this->Item->validate_fileup;
-                var_dump($data); exit;
                 if ($this->Item->save($data)) {
                     $id = $data['Item']['id'];
                     if (empty($id)) {
@@ -640,6 +639,7 @@ class MypageController extends FrontAppController {
             $data = $this->request->data;
             $data['Member'][$data['Member']['input_name']] = $data['Member']['file'];
             $this->Member->validate = $this->Member->validate_fileup;
+            var_dump($data); exit;
             if (!$this->Member->save($data)) {
                 $arrMsg = array();
                 foreach ($this->Member->validationErrors as $err) {
