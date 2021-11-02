@@ -237,12 +237,14 @@ Cache::config('apc', array('Engine' => 'Apc'));
 /**
  * A random string used in security hashing methods.
  */
-	Configure::write('Security.salt', 'DYhG93b0qyJfIxfs2guVoUubWwvniR2');
+//	Configure::write('Security.salt', 'DYhG93b0qyJfIxfs2guVoUubWwvniR2');
+    Configure::write('Security.salt', 'bless-e-DYhG93b0qyJfIxfs2guVoUubWwvniR2G0FgaC9mi');
 
 /**
  * A random numeric string (digits only) used to encrypt/decrypt strings.
  */
-	Configure::write('Security.cipherSeed', '7685930965745354249674968312345645');
+//	Configure::write('Security.cipherSeed', '7685930965745354249674968312345645');
+    Configure::write('Security.cipherSeed', '584297476859309657453542496749683645');
 
 /**
  * Apply timestamps with the last modified time to static assets (js, css, images).
