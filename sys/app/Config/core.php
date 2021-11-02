@@ -227,9 +227,9 @@
 /**
  * The level of CakePHP security.
  */
-Configure::write('Session.checkAgent', false);
+//Configure::write('Session.checkAgent', false);
 
-//	Configure::write('Security.level', 'medium');
+	Configure::write('Security.level', 'medium');
 
 // Make sure to add a apc cache config
 Cache::config('apc', array('Engine' => 'Apc'));
