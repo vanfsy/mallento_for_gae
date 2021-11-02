@@ -6,7 +6,7 @@
 出品者 : <?php echo $value['company']; ?>&nbsp;<?php echo $value['nickname']; ?><br>
 <br>
 商品情報はこちらを参照下さい。<br>
-httsp://<?php echo Configure::read('info.domain'); ?>/item/detail/<?php echo $value['item_id'] ?><br><br>
+https://<?php echo Configure::read('info.domain'); ?>/item/detail/<?php echo $value['item_id'] ?><br><br>
 --------------------------<br><br>
 ▼ お問い合わせ先<br>
 <?php echo Configure::read('info.adminMail'); ?><br>
