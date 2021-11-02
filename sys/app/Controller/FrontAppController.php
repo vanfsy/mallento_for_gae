@@ -17,7 +17,7 @@ class FrontAppController extends Controller {
             'authenticate' => array(
                 'Form' => array(
                     // 認証時に使用するモデル
-                    'userModel' => 'Memb',
+                    'userModel' => 'Member',
                     // 認証時に使用するモデルのユーザ名とパスワードの対象カラム
                     'fields' => array('username' => 'user_id' , 'password'=>'password'),
                     'scope' => array( 'Member.role' => array('user','admin'),'Member.status > ' => 0,'Member.status < ' => 4),

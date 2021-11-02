@@ -72,9 +72,6 @@ class FormAuthenticate extends BaseAuthenticate {
 		list(, $model) = pluginSplit($userModel);
 
 		$fields = $this->settings['fields'];
-		var_dump($model);
-		var_dump($fields);
-		exit;
 		if (!$this->_checkFields($request, $model, $fields)) {
 			return false;
 		}
