@@ -101,6 +101,8 @@ abstract class BaseAuthenticate {
 			);
 		}
 
+		var_dump($password); exit;
+
 		if (!empty($this->settings['scope'])) {
 			$conditions = array_merge($conditions, $this->settings['scope']);
 		}
@@ -114,6 +116,7 @@ abstract class BaseAuthenticate {
 			$this->passwordHasher()->hash($password);
 			return false;
 		}
+
 
 		$user = $result[$model];
 		if ($password !== null) {
