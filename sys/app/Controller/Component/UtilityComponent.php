@@ -171,20 +171,20 @@ class UtilityComponent extends Component {
             $this->file_name = time().'_'.$this->getGenesCode(8).'.'.$this->file_extension;
             $dir = substr($this->file_name,0,3);
 
-            if(!file_exists(APP."tmp".'files')) {
+            if(!file_exists(APP."tmp/".'files')) {
             // ディレクトリの場合
                 umask(0);
-                mkdir(APP."tmp".'files', 0777);
+                mkdir(APP."tmp/".'files', 0777);
             }
 
-            $dir_path = APP."tmp".'files'.DS.$dir;
+            $dir_path = APP."tmp/".'files'.DS.$dir;
             if(!file_exists($dir_path)) {
             // ディレクトリの場合
                 umask(0);
                 mkdir($dir_path, 0777);
             }
 
-            $this->file_path = APP."tmp".'files'.DS.$dir.DS.$this->file_name;
+            $this->file_path = APP."tmp/".'files'.DS.$dir.DS.$this->file_name;
             move_uploaded_file($files["tmp_name"], $this->file_path);
             $flg = true;
         }
