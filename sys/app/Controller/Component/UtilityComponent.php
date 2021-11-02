@@ -171,7 +171,6 @@ class UtilityComponent extends Component {
             $this->file_name = time().'_'.$this->getGenesCode(8).'.'.$this->file_extension;
             $dir = substr($this->file_name,0,3);
 
-            var_dump(App."tmp/".'files'); exit;
             if(!file_exists(APP."tmp/".'files')) {
             // ディレクトリの場合
                 umask(0);
